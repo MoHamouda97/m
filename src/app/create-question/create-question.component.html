@@ -1,0 +1,26 @@
+<section class="question-generator">
+    <div class="container">
+        <h1 class="text-center">Create Your Question</h1>
+        <form [formGroup]="qGeneratorForm">
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="title" class="form-label">Question Title</label>
+                    <input type="text" class="form-control" id="title" formControlName="title" >
+                </div>
+                <div class="col-md-12">
+                    <label for="date" class="form-label">Question</label>
+                    <input type="text" class="form-control" id="question" formControlName="question" >
+                    <small style="color: #dc3545;">Please add write answer between ()</small>
+                </div>                
+            </div>
+        </form>                        
+        <div class="row" style="margin-top: .5rem;">
+            <div class="col-md-12">
+                <button 
+                    (click)="addQusetion()"
+                    class="btn btn-primary">Add Question</button>   
+                <a class="btn btn-outline-primary ml-2" [routerLink]="['/questions/view']">View Question</a>                
+            </div> 
+        </div>
+    </div>
+</section>

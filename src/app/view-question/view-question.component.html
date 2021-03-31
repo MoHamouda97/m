@@ -1,0 +1,27 @@
+<section class="question-generator">
+    <div class="container">
+        <h1 class="text-center">{{title}}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="js_questions" class="list-group">
+                    <!--<li class="list-group-item" *ngFor="let q of questions" [innerHTML]="parseHTML(q)"></li>-->
+                </ul>              
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: .5rem;">
+            <div class="col-md-12">
+                <button 
+                    (click)="submit()"
+                    class="btn btn-primary">Submit</button>                 
+            </div> 
+        </div> 
+        
+        <div style="margin-top: .5rem;">
+            Answers will be displayed here after click submit button :
+            <label *ngIf="answers.length > 0" class="badge badge-secondary">
+                {{answers | json}}
+            </label>
+        </div>
+    </div>
+</section>
