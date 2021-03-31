@@ -7,14 +7,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CreateQuestionComponent } from './create-question/create-question.component';
 import { ViewQuestionComponent } from './view-question/view-question.component';
-import { sanitizeHtmlPipe } from './view-question/trustHtml.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateQuestionComponent,
     ViewQuestionComponent,
-    sanitizeHtmlPipe
   ],
   imports: [
     BrowserModule,
